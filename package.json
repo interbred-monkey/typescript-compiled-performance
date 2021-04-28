@@ -14,5 +14,6 @@
   },
   "scripts": {
     "tsc": "tsc --outDir tsc-build && node tsc-build/main.js"
+    "js": "node javascript/main.js"
   }
 }
