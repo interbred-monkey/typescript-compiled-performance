@@ -1,0 +1,19 @@
+{
+  "test": ".*.ts$",
+  "exclude": [".*.js$", "node_modules/"],
+  "minify": true,
+  "jsc": {
+    "parser": {
+      "syntax": "typescript",
+      "tsx": false,
+      "decorators": false,
+      "dynamicImport": false
+    },
+    "target": "es2019"
+  },
+  "module": {
+    "type": "commonjs",
+    "strictMode": true,
+    "lazy": true
+  }
+}
