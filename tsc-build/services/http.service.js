@@ -6,7 +6,7 @@ function fetch(url) {
     return new Promise((resolve) => {
         https_1.get(url, (res) => {
             handleError(res.statusCode);
-            let body;
+            let body = Buffer.from('');
             res
                 .on('data', (chunk) => {
                 body += chunk;

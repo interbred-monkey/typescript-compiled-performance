@@ -10,7 +10,7 @@ export function fetch(url: string): Promise<Response> {
     get(url, (res) => {
       handleError(res.statusCode);
 
-      let body: Buffer;
+      let body: Buffer = Buffer.from('');
       res
         .on('data', (chunk) => {
           body += chunk;
