@@ -10,7 +10,7 @@ async function fetch(url) {
       .get(url, (res) => {
         handleError(res.statusCode);
 
-        let body;
+        let body = Buffer.from('');
         res
           .on('data', (chunk) => {
             body += chunk;
