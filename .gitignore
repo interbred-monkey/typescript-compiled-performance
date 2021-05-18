@@ -37,3 +37,8 @@ typings/
 # Output directories
 tsc-build
 swc-build
+esbuild-build
+
+# Editors
+.vscode
+
