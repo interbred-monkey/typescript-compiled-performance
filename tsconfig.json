@@ -4,8 +4,8 @@
     "removeComments": true,
     "target": "es2019",
     "lib": ["es2019"],
-    "outDir": "typescript-compiled",
-    "rootDirs": ["typescript"]
+    "outDir": "builds/typescript",
+    "rootDirs": ["src"]
   },
-  "exclude": ["node_modules", "javascript"]
+  "exclude": ["node_modules", "javascript", "builds"]
 }

@@ -15,9 +15,9 @@
     "typescript": "^4.2.4"
   },
   "scripts": {
-    "tsc": "tsc --outDir tsc-build && node tsc-build/main.js",
+    "tsc": "tsc --outDir builds/tsc && node builds/tsc/main.js",
     "js": "node javascript/main.js",
-    "swc": "swc typescript -d swc-build --config-file .swcrc && node swc-build/main.js",
-    "esbuild": "node esbuild.js && node esbuild-build/main.js"
+    "swc": "swc src -d builds/swc --config-file .swcrc && node builds/swc/main.js",
+    "esbuild": "node esbuild.js && node builds/esbuild/main.js"
   }
 }
