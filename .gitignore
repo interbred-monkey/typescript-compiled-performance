@@ -35,9 +35,7 @@ typings/
 *.tgz
 
 # Output directories
-tsc-build
-swc-build
-esbuild-build
+builds
 
 # Editors
 .vscode
