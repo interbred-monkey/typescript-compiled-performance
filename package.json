@@ -12,12 +12,22 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
     "prettier": "^2.2.1",
-    "typescript": "^4.2.4"
+    "rimraf": "^3.0.2",
+    "ts-loader": "^9.2.3",
+    "typescript": "^4.2.4",
+    "webpack": "^5.39.0",
+    "webpack-cli": "^4.7.2"
   },
   "scripts": {
-    "tsc": "tsc --outDir builds/tsc && node builds/tsc/main.js",
+    "tsc": "npm run build:tsc && node builds/tsc/main.js",
+    "build:tsc": "tsc --outDir builds/tsc",
     "js": "node javascript/main.js",
-    "swc": "swc src -d builds/swc --config-file .swcrc && node builds/swc/main.js",
-    "esbuild": "node esbuild.js && node builds/esbuild/main.js"
+    "build:swc": "swc src -d builds/swc --config-file .swcrc",
+    "swc": "npm run build:swc && node builds/swc/main.js",
+    "build:esbuild": "node esbuild.js",
+    "esbuild": "npm run build:esbuild && node builds/esbuild/main.js",
+    "build:webpack": "webpack",
+    "webpack": "npm run build:webpack && node builds/webpack/main.js",
+    "build:all": "rimraf ./builds && npm run build:tsc && npm run build:swc && npm run build:esbuild && npm run build:webpack"
   }
 }
