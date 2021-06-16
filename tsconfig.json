@@ -1,11 +1,14 @@
 {
   "compilerOptions": {
+    "rootDir": "src",
+    "composite": true,
     "module": "commonjs",
     "removeComments": true,
     "target": "es2019",
     "lib": ["es2019"],
-    "outDir": "builds/typescript",
-    "rootDirs": ["src"]
+    "outDir": "builds/tsc",
+    "types": ["node"],
+    "tsBuildInfoFile": ".tsbuildinfo"
   },
-  "exclude": ["node_modules", "javascript", "builds"]
+  "exclude": ["node_modules"]
 }
