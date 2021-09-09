@@ -1,5 +1,5 @@
 require('esbuild').build({
-  entryPoints: ['./src/main.js', './src/services/http.service.ts'],
+  entryPoints: ['./src/main.ts', './src/services/http.service.ts'],
   outdir: './builds/esbuild',
   minify: true,
   target: 'es2019',

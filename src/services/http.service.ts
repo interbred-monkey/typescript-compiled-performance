@@ -8,7 +8,8 @@ interface Response {
 export function fetch(url: string): Promise<Response> {
   return new Promise((resolve) => {
     get(url, (res) => {
-      handleError(res.statusCode);
+      const statusCode: number = res.statusCode || 0;
+      handleError(statusCode);
 
       let body: Buffer = Buffer.from('');
       res
@@ -16,7 +17,7 @@ export function fetch(url: string): Promise<Response> {
           body += chunk;
         })
         .on('end', () => {
-          return resolve({ statusCode: res.statusCode, body });
+          return resolve({ statusCode, body });
         });
     }).on('error', (error) => {
       throw new Error(`request threw error: ${error.message}`);
